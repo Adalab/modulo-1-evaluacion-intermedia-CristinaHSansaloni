@@ -8,24 +8,30 @@ header{
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 20px 30px 20px 30px;
 }
 .logo {
     width: 155px;
-    padding: 10px 10px 10px 10px;
 }
 .menu {
-    
+    margin-bottom: 13px;
+    text-align: center; 
 }
 .nav li{
     font-size: 16px;
+    display: inline;
+    margin: 10px 10px 0 10px;
+
+} 
+.menu a{
+    text-decoration: none;
+    color: var(--nav-menu-color);
 }
 
-.slogan {
-    font-size: 30px;
-}
 main{
     background-color: var(--background-color);
     height: 100vh;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,4 +42,18 @@ main{
   font-weight: 700;
   width: 40%;
   text-align: center; 
+  line-height: 1;
+}
+
+@media screen and (min-width:768px) {
+   .slogan {
+       font-size: 40px;
+   } 
+
+    header {
+        flex-direction: row;
+    }
+    .menu{
+        margin-left: auto;
+    }
 }
