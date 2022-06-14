@@ -1,59 +1,72 @@
 :root {
     font-family: 'Rubik', sans-serif;
-    --nav-menu-color: #4a4a4a;
+    font-size: 16px;
+    --menu-color: #4a4a4a;
     --background-color: #3CDBC0;
     --text-color:#FFFFFF;
 }
-header{
+
+.header{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 20px 30px 20px 30px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0%;
+    width: 100vw;
+    background-color: var(--text-color);
+    padding-bottom: 13px;
 }
-.logo {
+
+.header .image {
     width: 155px;
+    padding-top: 10px;
 }
-.menu {
-    margin-bottom: 13px;
-    text-align: center; 
-}
-.nav li{
-    font-size: 16px;
-    display: inline;
-    margin: 10px 10px 0 10px;
 
-} 
-.menu a{
+.header .menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu .link {
+    padding: 10px;
+    color: var(--menu-color);
     text-decoration: none;
-    color: var(--nav-menu-color);
+    text-transform: uppercase;
 }
 
-main{
+.main{
     background-color: var(--background-color);
     height: 100vh;
+    width: 100vw;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--text-color);
 }
-.slogan{
-  color: var(--text-color);
-  font-size: 30px; 
+
+.title {
+  font-size: 1.875rem; 
   font-weight: 700;
-  width: 40%;
+  width: 11ch;
+  text-transform: capitalize;
   text-align: center; 
-  line-height: 1;
+  line-height: 1.2;
 }
 
 @media screen and (min-width:768px) {
-   .slogan {
-       font-size: 40px;
-   } 
-
-    header {
+    .header {
         flex-direction: row;
+        justify-content: space-between;
     }
-    .menu{
-        margin-left: auto;
+    .header .image {
+        padding-left: 30px;
+    }
+    .header .menu {
+        padding-right: 20px;
+    }
+    .title {
+        font-size: 2.5rem;
     }
 }
